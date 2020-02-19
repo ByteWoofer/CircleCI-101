@@ -15,3 +15,9 @@ jobs:
       - checkout
       - run: echo "A first hello"
       - run: echo "Hello again."
+workflows:
+  version: 2
+  prep_and_build:
+    jobs:
+      - prep
+      - build
